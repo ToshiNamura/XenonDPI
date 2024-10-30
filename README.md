@@ -5,22 +5,14 @@ Patch for bol-van/zapret (Discord fix)
 ## Description
 Патч для [zapret](https://github.com/bol-van/zapret) репозитория под Windows.
 Фикс Discord, Youtube, и других блокировок от ркн.
-+ ``` XenonDPI.cmd ``` - Bat скрипт для winws.exe, создает фильтрацию пакетов для обхода.
-+ ``` XenonDPI.txt ``` - Сборник DNS Хостов.
-+ ``` XenonDPI_service_install.cmd ``` - запуск XenonDPI.cmd в виде службы виндовс. (От имени Администратора.)
-+ ``` XenonDPI_service_remove.cmd ``` - удаление службы виндовс. (От имени Администратора.)
-
-## Installation
-1. Скачать архив [master.zip](https://github.com/bol-van/zapret-win-bundle/archive/refs/heads/master.zip) от bol-van/zapret.
-2. Скачайте данный репозиторий в виде архива [master.zip](https://github.com/ToshiNamura/XenonDPI/archive/refs/heads/master.zip).
-3. Распакуйте ``` zapret-win-bundle-master.zip ``` в любое удобное для вас место.
-4. Распакуйте файлы из ``` XenonDPI-main.zip ``` в папку ``` zapret-winws ```.
-5. Запускаете ``` XenonDPI.cmd ``` и вуаля, всё должно работать.
-+ Если хотите создать службу, то запустите ``` XenonDPI_service_install.cmd ``` от имени Администратора.
++ ``` Gateway.cmd ``` - cmd скрипт для winws.exe, создает фильтрацию пакетов для обхода.
++ ``` ServiceInstall.cmd ``` - запуск XenonDPI.cmd в виде службы виндовс. (От имени Администратора.)
++ ``` ServiceRemove.cmd ``` - удаление службы виндовс. (От имени Администратора.)
++ ``` ServiceStatus.cmd ``` - статус службы виндовс.
 
 ## Removal
-Перед удалением ``` zapret-win-bundle-master ``` нужно сделать одно из двух действий ниже:
-1. Запустите ``` XenonDPI_service_remove.cmd ```.
+Перед удалением нужно сделать одно из двух действий ниже:
+1. Запустите ``` ServiceRemove.cmd ```.
 2. Введите в терминале: ``` sc stop "WinDivert" ``` и ``` sc delete "WinDivert" ```
 +  Это нужно для завершения службы ``` WinDivert ```, иначе система не даст вам удалить файл ``` WinDivert64.sys ```.
 
